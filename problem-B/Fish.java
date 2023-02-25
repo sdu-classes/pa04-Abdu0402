@@ -1,32 +1,37 @@
-public class Fish extends Animal implements Pet{
-    String name;
+public class Fish extends Animal implements Pet {
+    private String name;
 
-    public Fish(String name){
-        super(0);
-        this.name = name;
-    }
-
-    public Fish(){
+    public Fish() {
         this("Nemo");
     }
-    @Override
-    public String getName(){
-        return name;
-    }
-    @Override
-    public void setName(String name){
+
+    public Fish(String name) {
+        super(4);
         this.name = name;
     }
+
     @Override
-    public void play(){
-        System.out.println("Fishes are playing");
+    public void eat() {
+        System.out.printf("%s is eating", this.name);
     }
-    @Override 
-    public void walk(){
-        System.out.println("Fishes they do not have legs and can not walk :)");
-    }
+
     @Override
-    public void eat(){
-        System.out.println("Fishes are eating water insects");
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void play() {
+        System.out.printf("Fish %s is playing", this.name);
+    }
+
+    @Override
+    public void walk() {
+        throw new UnsupportedOperationException("Fish doesn't walk!!!");
     }
 }
