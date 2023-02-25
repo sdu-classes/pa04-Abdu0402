@@ -2,15 +2,20 @@ public class Main {
     public static void main(String[] args) {
         Fish d = new Fish();
         d.eat();
-        d.walk();
+        try {
+            d.walk();
+        } catch (UnsupportedOperationException e) {
+            System.out.println("\n" + e.getMessage());
+        }
 
-        Rabbit r = new Rabbit();
-        r.play();
-        r.eat();
-        r.walk();
+        Cat c = new Cat("Fluffy");
+        c.eat();
+        c.setName("Masya");
+        c.eat();
+        c.play();
 
-        Animal a = new Spider();
-        a.walk();
-        a.eat();
+        Animal a = new Fish();
+        Animal e = new Spider();
+        Pet p = new Cat();
     }
 }
