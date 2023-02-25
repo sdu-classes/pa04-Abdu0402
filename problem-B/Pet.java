@@ -5,4 +5,3 @@ interface Pet {
 
     public void play();
 }
-
