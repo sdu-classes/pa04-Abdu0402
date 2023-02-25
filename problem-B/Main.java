@@ -1,16 +1,22 @@
+package File;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Fish d = new Fish();
-        d.eat();
+        Rabbit  c = new Rabbit("Fluffy");
+        Animal a = new Fish();
+        Animal e =new Spider();
+        Pet p  = new Rabbit();
+        d.setName("Sazan");
         d.walk();
-
-        Rabbit r = new Rabbit();
-        r.play();
-        r.eat();
-        r.walk();
-
-        Animal a = new Spider();
-        a.walk();
+        c.eat();
+        c.play();
+        c.walk();
         a.eat();
+        a.walk();
+        e.eat();
+        e.walk();
+        p.setName("Mulky");
+        p.play();
     }
 }
