@@ -1,11 +1,13 @@
 abstract class Animal {
     protected int legs;
 
-    protected Animal(int legs){
+    public Animal(int legs) {
         this.legs = legs;
     }
-    protected void walk(){
-        System.out.println("This animal wlaks with " + this.legs + " legs");
+
+    public abstract void eat();
+
+    public void walk() {
+        System.out.println("This animal makes sound");
     }
-    abstract void eat();
 }
